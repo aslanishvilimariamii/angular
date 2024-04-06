@@ -1,0 +1,19 @@
+<table >
+    <thead>
+        <tr>
+            <th >id</th>
+            <th >სახელი</th>
+            <th>სტატუსი</th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor = "let user of UserList">
+            <td>{{user.Id}}</td>
+            <td>
+                <a [routerLink]="['/UserProfile/', user.Id]">{{user.Name}}</a>
+            </td>
+            <td>{{user.Status}}</td>
+            
+         </tr>
+    </tbody>
+</table> 
